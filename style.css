@@ -260,6 +260,44 @@ a { color: inherit; }
 .parchemin .ornement { color: var(--sang); }
 .parchemin ::selection { background: #2a2016; color: var(--papier); }
 
+/* ---------- Le groupe en jeu ---------- */
+.section--projet {
+  background: #18140f;
+  border-top: 1px solid var(--encre-3);
+}
+.faits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+  max-width: 58rem;
+  background: var(--encre-3);
+  border: 1px solid var(--encre-3);
+}
+.faits div {
+  background: var(--encre);
+  padding: 1.1rem 1.3rem;
+}
+.faits dt {
+  font-family: var(--machine);
+  font-size: .76rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--laiton);
+  margin-bottom: .3rem;
+}
+.faits dd {
+  margin: 0;
+  font-family: var(--titre);
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--papier);
+}
+@media (min-width: 960px) { .faits { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .faits { grid-template-columns: 1fr; } }
+.projet p { margin: 0 0 1.35rem; }
+.projet h3:first-child { margin-top: 0; }
+
 /* Résumé en tête du background */
 .resume {
   position: relative;
@@ -460,7 +498,8 @@ a { color: inherit; }
 }
 
 /* Récit découpé en chapitres */
-.recit h3 {
+.recit h3,
+.projet h3 {
   font-family: var(--titre);
   font-weight: 400;
   font-size: clamp(1.45rem, 3.6vw, 1.8rem);
@@ -468,7 +507,8 @@ a { color: inherit; }
   margin: 3rem 0 1rem;
   color: var(--papier);
 }
-.recit h3 span {
+.recit h3 span,
+.projet h3 span {
   display: block;
   font-family: var(--machine);
   font-size: .78rem;
