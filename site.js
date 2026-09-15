@@ -1,4 +1,29 @@
 (() => {
+
+  const calme = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.hero').forEach((hero) => {
+    const brume = document.createElement('div');
+    brume.className = 'hero__brume';
+    brume.setAttribute('aria-hidden', 'true');
+    brume.innerHTML = '<span></span><span></span><span></span>';
+    hero.prepend(brume);
+    if (calme) return;
+    const spores = document.createElement('div');
+    spores.className = 'spores';
+    spores.setAttribute('aria-hidden', 'true');
+    const nombre = hero.classList.contains('hero--page') ? 14 : 26;
+    for (let k = 0; k < nombre; k++) {
+      const s = document.createElement('i');
+      const taille = (Math.random() * 3 + 1.5).toFixed(1);
+      s.style.setProperty('--x', (Math.random() * 100).toFixed(1) + '%');
+      s.style.setProperty('--t', taille + 'px');
+      s.style.setProperty('--d', (Math.random() * 14 + 12).toFixed(1) + 's');
+      s.style.setProperty('--r', (-Math.random() * 26).toFixed(1) + 's');
+      s.style.setProperty('--dx', ((Math.random() - .5) * 90).toFixed(0) + 'px');
+      spores.appendChild(s);
+    }
+    hero.appendChild(spores);
+  });
   const barre = document.querySelector('.barre');
   const menu = document.querySelector('.barre__menu');
 
