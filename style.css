@@ -386,6 +386,102 @@ a { color: inherit; }
   mix-blend-mode: multiply;
 }
 
+/* Dossier avec portrait */
+.dossier--portrait { max-width: 54rem; }
+.dossier__grille {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) 1fr;
+  gap: clamp(1.2rem, 4vw, 2.2rem);
+  align-items: start;
+}
+.photo {
+  margin: 0;
+  background: #f3ead6;
+  padding: .55rem .55rem 2rem;
+  box-shadow: 0 6px 18px rgba(40, 25, 10, .35);
+  transform: rotate(1.8deg);
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: sepia(.25) contrast(1.05);
+}
+.photo figcaption {
+  font-family: var(--machine);
+  font-size: .78rem;
+  text-align: center;
+  margin-top: .55rem;
+  color: #4a3b2a;
+}
+.dossier--portrait .tampon {
+  top: auto;
+  right: auto;
+  bottom: clamp(2.4rem, 6vw, 3.6rem);
+  left: clamp(1.6rem, 5vw, 3.4rem);
+  z-index: 2;
+}
+.dossier__devise {
+  margin: 1.4rem 0 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-left: 3px solid var(--sang);
+  padding-left: .9rem;
+  color: #3b2d1f;
+}
+
+/* Récit découpé en chapitres */
+.recit h3 {
+  font-family: var(--titre);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 3.6vw, 1.8rem);
+  line-height: 1.15;
+  margin: 3rem 0 1rem;
+  color: var(--papier);
+}
+.recit h3 span {
+  display: block;
+  font-family: var(--machine);
+  font-size: .78rem;
+  letter-spacing: .08em;
+  color: var(--laiton);
+  margin-bottom: .3rem;
+}
+.recit .exergue {
+  margin: 1.6rem 0;
+  padding: 1rem 1.3rem;
+  background: var(--encre-2);
+  border-left: 3px solid var(--laiton);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--papier);
+}
+.traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.traits li {
+  font-family: var(--machine);
+  font-size: .8rem;
+  border: 1px solid var(--encre-3);
+  padding: .25rem .7rem;
+  color: var(--texte-doux);
+}
+.recit .devise-finale {
+  text-align: center;
+  font-family: var(--titre);
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  line-height: 1.25;
+  color: var(--sang-clair);
+  margin: 3.5rem 0 1rem;
+}
+
 .retour {
   display: inline-block;
   font-family: var(--titre);
@@ -415,6 +511,8 @@ a { color: inherit; }
   .dossier dl { grid-template-columns: 1fr; gap: .1rem; }
   .dossier dd { margin-bottom: .6rem; }
   .tampon { position: static; display: inline-block; margin-bottom: 1rem; }
+  .dossier__grille { grid-template-columns: 1fr; }
+  .photo { max-width: 15rem; margin: 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
