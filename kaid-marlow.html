@@ -7,19 +7,18 @@
 <meta name="description" content="Kaid Marlow, dit « Scar » chez les Freux et « le Roi des Rats » à Van Horn. Membre des Freux de Van Horn.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦‍⬛</text></svg>">
 </head>
 <body>
-
 <nav class="nav">
-  <a class="nav__marque" href="index.html">Les <span>Freux</span></a>
+  <a class="nav__marque" href="index.html">Les <span>Freux</span> <em>de Van Horn</em></a>
   <div class="nav__liens">
     <a href="index.html#objectifs">Objectifs</a>
-    <a href="index.html#en-jeu">En jeu</a>
     <a href="index.html#background">Background</a>
-    <a href="index.html#membres" aria-current="page">Membres</a>
+    <a href="index.html#personnages" aria-current="page">Personnages</a>
+    <a class="nav__bouton" href="dossier-groupe.html">Dossier de groupe</a>
   </div>
 </nav>
 
@@ -55,7 +54,7 @@
 
 <main>
 
-  <section class="section" style="padding-top:0">
+  <section class="section section--suite">
     <div class="dossier">
       <div class="tampon">EN FUITE</div>
       <p class="dossier__titre"><span>POLICE DE SAINT DENIS</span><span>DOSSIER N° 1147</span></p>
@@ -77,11 +76,11 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:0">
-    <div class="entete-section">
+  <section class="section section--suite">
+    <header class="entete">
+      <p class="entete__numero">Histoire du personnage</p>
       <h2>Background</h2>
-      <div class="ornement">✦</div>
-    </div>
+    </header>
 
     <div class="prose recit recit--sombre">
       <p>Kaid Marlow est né à Saint Denis, dans une maison étroite du quartier nord. Elle sentait le vinaigre, le formol et le papier humide. Son père, Arthur Marlow, était un homme de science brillant mais sans le sou. Chimiste de formation et naturaliste par passion, il passait ses nuits penché sur des bocaux, des cadavres d'oiseaux et des carnets couverts d'une écriture fébrile. Il rêvait de découvertes qui feraient entrer son nom dans les livres. Les grands messieurs de l'Académie, eux, ne voyaient en lui qu'un original sans diplôme prestigieux ni relations. Ils n'ont jamais voulu de ses travaux.</p>
@@ -110,15 +109,21 @@
 
       <div class="fin">✦ ✦ ✦</div>
 
-      <p style="text-align:center"><a class="retour" href="index.html#membres">← Retour aux Freux</a></p>
+      <p style="text-align:center"><a class="retour" href="index.html#personnages">← Retour aux personnages</a></p>
     </div>
   </section>
 
 </main>
 
 <footer class="pied">
-  <strong>Les Freux de Van Horn</strong><br>
-  Background de groupe · Red Dead RP
+  <div class="pied__marque">Les Freux de Van Horn</div>
+  <nav class="pied__liens" aria-label="Pages du site">
+    <a href="index.html">Accueil</a>
+    <a href="dossier-groupe.html">Dossier de groupe</a>
+    <a href="kaid-marlow.html">Kaid Marlow</a>
+    <a href="mabel-crowley.html">Mabel Crowley</a>
+  </nav>
+  <p>Groupe de pillards · Red Dead RP · New Hanover, années 1890</p>
 </footer>
 
 </body>
