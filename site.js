@@ -68,4 +68,26 @@
   }
 
   document.querySelectorAll('[data-imprimer]').forEach((b) => b.addEventListener('click', () => window.print()));
+
+  const photos = document.querySelectorAll('[data-zoom]');
+  if (photos.length && typeof HTMLDialogElement === 'function') {
+    const boite = document.createElement('dialog');
+    boite.className = 'visionneuse';
+    boite.innerHTML = '<img alt=""><div class="visionneuse__bas"><span></span>'
+      + '<button class="visionneuse__fermer" type="button" aria-label="Fermer">✕</button></div>';
+    document.body.appendChild(boite);
+    const image = boite.querySelector('img');
+    const legende = boite.querySelector('span');
+    boite.querySelector('button').addEventListener('click', () => boite.close());
+    boite.addEventListener('click', (e) => { if (e.target === boite) boite.close(); });
+    photos.forEach((lien) => lien.addEventListener('click', (e) => {
+      e.preventDefault();
+      const vignette = lien.querySelector('img');
+      image.src = lien.getAttribute('href');
+      image.alt = vignette ? vignette.alt : '';
+      const texte = lien.querySelector('.galerie__legende');
+      legende.textContent = texte ? texte.textContent : '';
+      boite.showModal();
+    }));
+  }
 })();

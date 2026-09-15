@@ -818,6 +818,115 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
 .panneau .note { font-family: var(--ui); font-size: .92rem; color: var(--pale); font-style: italic; margin-top: 1.2rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
 
+/* ---------- Galeries photo ---------- */
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+.galerie__item {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--rayon-s);
+  overflow: hidden;
+  border: 1px solid var(--bord);
+  background: var(--surface-2);
+  cursor: zoom-in;
+}
+.galerie__item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.galerie__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 6, 5, .85));
+}
+.galerie__item:hover img { transform: scale(1.04); }
+.galerie__legende {
+  position: absolute;
+  left: .9rem;
+  right: 3rem;
+  bottom: .75rem;
+  z-index: 1;
+  font-size: .82rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--texte);
+}
+.galerie__zoom {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  z-index: 1;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(12, 10, 8, .65);
+  border: 1px solid var(--bord-fort);
+  color: var(--texte);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.galerie__zoom .icone { width: .95rem; height: .95rem; }
+.galerie__item:hover .galerie__zoom,
+.galerie__item:focus-visible .galerie__zoom { opacity: 1; }
+.galerie__attente {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-height: 7rem;
+  border-radius: var(--rayon-s);
+  border: 1px dashed var(--bord-fort);
+  color: var(--pale);
+  font-size: .92rem;
+}
+
+.visionneuse {
+  width: min(92vw, 90rem);
+  max-width: none;
+  max-height: 92vh;
+  padding: 0;
+  border: 1px solid var(--bord-fort);
+  border-radius: var(--rayon);
+  background: #0a0806;
+  color: var(--texte);
+  overflow: hidden;
+}
+.visionneuse::backdrop { background: rgba(5, 4, 3, .85); backdrop-filter: blur(6px); }
+.visionneuse img { display: block; width: 100%; max-height: calc(92vh - 3.2rem); object-fit: contain; }
+.visionneuse__bas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem 1rem;
+  font-size: .9rem;
+  color: var(--doux);
+}
+.visionneuse__fermer {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--bord-fort);
+  background: transparent;
+  color: var(--texte);
+  cursor: pointer;
+}
+
 /* ---------- Fiche de personnage : dossier papier ---------- */
 .dossier {
   position: relative;
@@ -909,6 +1018,10 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
   .lecture, .dossier-page { grid-template-columns: 1fr; }
   .lecture__aside, .sommaire { position: static; }
   .sommaire ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .stats { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .barre__menu { display: grid; }
@@ -958,6 +1071,8 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
   .section { padding: 0; }
   .dossier-page { display: block; }
   .stat, .panneau, .perso { background: #fff; border: 1px solid #ccc; color: #000; break-inside: avoid; }
+  .galerie__zoom, .galerie__attente { display: none; }
+  .galerie__item { break-inside: avoid; }
   .panneau p, .stat__valeur, .panneau h2, .perso h4 { color: #000; }
   .js [data-reveal] { opacity: 1; transform: none; }
 }
