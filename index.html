@@ -5,25 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Les Freux de Van Horn</title>
 <meta name="description" content="Les Freux, bande de pillards de Van Horn. Objectifs, background et personnages du groupe, Red Dead RP, années 1890.">
+<meta name="theme-color" content="#0c0a08">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IM+Fell+English+SC&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦‍⬛</text></svg>">
 </head>
 <body>
-<nav class="nav">
-  <a class="nav__marque" href="index.html">Les <span>Freux</span> <em>de Van Horn</em></a>
-  <div class="nav__liens">
-    <a href="index.html#objectifs">Objectifs</a>
-    <a href="index.html#background">Background</a>
-    <a href="index.html#personnages">Personnages</a>
-    <a class="nav__bouton" href="dossier-groupe.html">Dossier de groupe</a>
-  </div>
-</nav>
+<header class="barre">
+  <nav class="barre__inner" aria-label="Navigation principale">
+    <a class="marque" href="index.html"><span class="marque__logo"><svg viewBox="-24 -12 48 24" aria-hidden="true"><path fill="currentColor" d="M-20 2 C-14 -6 -7 -7 -1 1 L0 3 L1 1 C7 -7 14 -6 20 2 C13 -2 6 -1 1 5 L0 7 L-1 5 C-6 -1 -13 -2 -20 2Z"/></svg></span>Les Freux</a>
+    <button class="barre__menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu"><svg class="icone icone-ouvrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><svg class="icone icone-fermer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="barre__liens" id="menu-principal">
+      <a href="index.html#objectifs">Objectifs</a>
+      <a href="index.html#background">Background</a>
+      <a href="index.html#personnages">Personnages</a>
+      <a class="barre__cta" href="dossier-groupe.html"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Dossier de groupe</a>
+    </div>
+  </nav>
+</header>
 
-<header class="hero">
-  <svg class="hero__nuee" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<main id="haut">
+
+  <section class="hero">
+    <svg class="hero__nuee" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
       <path id="freux" fill="currentColor" d="M-20 2 C-14 -6 -7 -7 -1 1 L0 3 L1 1 C7 -7 14 -6 20 2 C13 -2 6 -1 1 5 L0 7 L-1 5 C-6 -1 -13 -2 -20 2Z"/>
     </defs>
@@ -68,42 +75,50 @@
       <use href="#freux" transform="translate(540 55) rotate(14) scale(0.73)"/>
     </g>
   </svg>
-
-  <svg class="hero__horizon" viewBox="0 0 1440 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <svg class="hero__horizon" viewBox="0 0 1440 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <path fill="currentColor" d="M0 130 L0 96 L40 96 L40 74 L78 56 L116 74 L116 96 L150 96 L150 66 L232 66 L232 96 L262 96 L262 80 L292 62 L322 80 L322 96 L360 96 L360 58 L372 58 L372 44 L384 44 L384 58 L440 58 L440 96 L470 96 L470 76 L506 76 L506 96 L560 96 L560 70 L600 50 L640 70 L640 96 L700 96 L700 84 L760 84 L760 96 L800 96 L800 62 L870 62 L870 96 L905 96 L905 78 L935 64 L965 78 L965 96 L1010 96 L1010 72 L1060 72 L1060 96 L1110 96 L1110 102 L1130 102 L1130 88 L1134 88 L1134 102 L1170 102 L1170 86 L1174 86 L1174 102 L1210 102 L1210 90 L1214 90 L1214 102 L1262 102 L1270 36 L1266 36 L1266 28 L1276 28 L1276 20 L1284 12 L1292 20 L1292 28 L1302 28 L1302 36 L1298 36 L1306 102 L1340 102 L1340 94 L1344 94 L1344 102 L1390 102 L1390 92 L1394 92 L1394 102 L1440 104 L1440 130 Z"/>
   </svg>
 
-  <div class="hero__contenu">
-    <p class="surtitre">New Hanover · Années 1890</p>
-    <h1>Les Freux<small>de Van Horn</small></h1>
-    <p class="citation">Un Freux seul, c'est un rat. Dix Freux, c'est la peste.</p>
-    <div class="hero__actions">
-      <a class="bouton bouton--plein" href="dossier-groupe.html">Dossier de groupe</a>
-      <a class="bouton" href="#background">Lire le background</a>
+    <div class="hero__contenu">
+      <p class="pastille"><span class="pastille__point"></span>Groupe de pillards · Red Dead RP</p>
+      <h1 class="hero__titre">Les Freux <span>de Van Horn</span></h1>
+      <p class="hero__accroche">« Un Freux seul, c'est un rat. Dix Freux, c'est la peste. »</p>
+      <div class="hero__actions">
+        <a class="bouton bouton--plein" href="dossier-groupe.html"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Dossier de groupe</a>
+        <a class="bouton" href="#background">Lire le background <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <ul class="hero__chiffres">
+        <li><strong>5</strong><span>Membres</span></li>
+        <li><strong>Van Horn</strong><span>Implantation</span></li>
+        <li><strong>3 villes</strong><span>Routes pillées</span></li>
+        <li><strong>1890</strong><span>New Hanover</span></li>
+      </ul>
     </div>
-  </div>
-</header>
-
-<main>
+  </section>
 
   <section class="section" id="objectifs">
-    <div class="largeur">
-      <header class="entete">
-        <p class="entete__numero">I · Objectifs</p>
-        <h2>Les objectifs du groupe</h2>
+    <div class="conteneur">
+      <header class="titre-section" data-reveal>
+        <p class="surligne">Objectifs</p>
+        <h2>Ce que veulent les Freux</h2>
+        <p>Un paradis de bandits à Van Horn en jeu, et un vrai groupe territorial pour le serveur.</p>
       </header>
 
       <div class="grille-2">
-        <article class="carte">
-          <div class="carte__etiquette">EN JEU</div>
-          <h3>Objectif RP</h3>
+        <article class="carte" data-reveal>
+          <div class="carte__tete">
+            <span class="icone-boite"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <div><span class="carte__etiquette">En jeu</span><h3>Objectif RP</h3></div>
+          </div>
           <p>Les Freux veulent faire de Van Horn un paradis de bandits : une terre libre où la loi ne trouve jamais personne, et où les pires criminels du pays peuvent venir se cacher, à condition d'en payer le prix. Ils veulent contrôler la ville et ses environs, rançonner les étrangers trop voyants et vivre du recel et de l'hébergement des fugitifs. Tout ce qui passe sur leur territoire doit leur rapporter.</p>
           <p>Leur ambition dépasse pourtant les limites de la baie. Sans forcément haïr le gouvernement, les Freux rejettent ce qu'il représente : les compagnies, les banquiers, les lois écrites loin d'ici et les étoiles qui les font appliquer. Ils veulent revenir à un temps où chacun était libre. Pour y parvenir, ils poussent les mineurs, les ouvriers et les fermiers à se rassembler et à manifester jusqu'à faire trembler les villes. Pour eux, la révolte est à la fois une cause et une occasion de pillage. En attendant ce pays libre, ils se servent au passage.</p>
         </article>
 
-        <article class="carte">
-          <div class="carte__etiquette">HORS JEU</div>
-          <h3>Objectif HRP</h3>
+        <article class="carte" data-reveal>
+          <div class="carte__tete">
+            <span class="icone-boite"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12h4"/><path d="M8 10v4"/><path d="M15 13h.01"/><path d="M18 11h.01"/><rect width="20" height="12" x="2" y="6" rx="2"/></svg></span>
+            <div><span class="carte__etiquette">Hors jeu</span><h3>Objectif HRP</h3></div>
+          </div>
           <p>Nous trouvons que le serveur manque aujourd'hui de groupes réellement territoriaux. Dans l'univers de Red Dead, beaucoup de bandes sont attachées à une région, comme les Rejetons de Murphree ou les Pillards de Lemoyne. Nous voulons faire vivre cet aspect en créant un groupe qui agit seulement à Van Horn et sur les routes qui y mènent. Les joueurs sauront ainsi où se trouve le danger et choisiront en connaissance de cause de s'y aventurer.</p>
           <p>Nous voulons aussi bâtir une vraie communauté autour de Van Horn, avec des scènes cohérentes et immersives qui s'appuient sur l'environnement. Le caractère des Freux est pensé pour favoriser l'interaction plutôt que l'affrontement systématique. Lâches à armes égales, ils négocient, mentent ou fuient, et détalent dès qu'ils aperçoivent un shérif. Les autres joueurs, comme les forces de l'ordre, ont donc toujours la possibilité de leur tenir tête. Leur usage de la ruse, leurs trahisons internes et leurs manifestations doivent créer des intrigues et de grandes scènes ouvertes à tout le serveur. Ces manifestations seront organisées en concertation avec le staff.</p>
         </article>
@@ -111,82 +126,88 @@
     </div>
   </section>
 
-  <section class="bandeau" aria-label="Dossier de groupe">
-    <div class="bandeau__contenu largeur">
+  <section class="section section--serree">
+    <div class="appel" data-reveal>
       <div>
-        <p class="entete__numero">Dossier de groupe</p>
-        <h2>Le projet, en une page</h2>
+        <p class="surligne">Dossier de groupe</p>
+        <h2>Tout le projet, en une page</h2>
         <p>Activités, scènes apportées au serveur, effectif, évolution envisagée, implantation et principaux personnages.</p>
       </div>
-      <a class="bouton bouton--plein" href="dossier-groupe.html">Consulter le dossier →</a>
+      <a class="bouton bouton--plein" href="dossier-groupe.html">Consulter le dossier <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </section>
 
-  <section class="section parchemin" id="background">
-    <header class="entete">
-      <p class="entete__numero">II · Background</p>
-      <h2>Background du groupe</h2>
-    </header>
+  <section class="section" id="background">
+    <div class="conteneur">
+      <header class="titre-section" data-reveal>
+        <p class="surligne">Background</p>
+        <h2>L'histoire du groupe</h2>
+      </header>
 
-    <aside class="resume">
-      <div class="resume__etiquette">EN BREF</div>
-      <p>Les Freux sont une bande de pillards installée à Van Horn, un port pourri de New Hanover où les hommes de loi ne s'attardent jamais. On y trouve d'anciens mineurs, dockers, fermiers et déserteurs, tous rejetés par le système. Ils n'aiment pas ce que représente le gouvernement et rêvent d'un retour à un temps où chacun était libre. Pour ça, ils attisent la colère des petites gens et profitent des manifestations pour piller.</p>
-      <p>Ils n'ont aucun code et n'hésitent pas à se trahir entre eux. Seuls ou à armes égales, ils négocient, mentent ou fuient. En nombre, ils deviennent de vrais rapaces. Ils préfèrent la ruse et les pièges au combat, et détalent dès qu'ils aperçoivent un shérif. Leur spécialité est de piller les routes entre Van Horn, Saint Denis et Rhodes, jusqu'à ce que certaines deviennent célèbres pour ça. À Van Horn, les étrangers trop bien habillés se font détrousser, et les fugitifs trouvent refuge, s'ils paient.</p>
-    </aside>
+      <div class="lecture">
+        <aside class="lecture__aside" data-reveal>
+          <div class="resume">
+            <p class="resume__etiquette"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"/><path d="M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></svg>En bref</p>
+            <p>Les Freux sont une bande de pillards installée à Van Horn, un port pourri de New Hanover où les hommes de loi ne s'attardent jamais. On y trouve d'anciens mineurs, dockers, fermiers et déserteurs, tous rejetés par le système. Ils n'aiment pas ce que représente le gouvernement et rêvent d'un retour à un temps où chacun était libre. Pour ça, ils attisent la colère des petites gens et profitent des manifestations pour piller.</p>
+            <p>Ils n'ont aucun code et n'hésitent pas à se trahir entre eux. Seuls ou à armes égales, ils négocient, mentent ou fuient. En nombre, ils deviennent de vrais rapaces. Ils préfèrent la ruse et les pièges au combat, et détalent dès qu'ils aperçoivent un shérif. Leur spécialité est de piller les routes entre Van Horn, Saint Denis et Rhodes, jusqu'à ce que certaines deviennent célèbres pour ça. À Van Horn, les étrangers trop bien habillés se font détrousser, et les fugitifs trouvent refuge, s'ils paient.</p>
+          </div>
+        </aside>
 
-    <div class="prose recit">
-      <p>On raconte que Van Horn n'a jamais été une ville, seulement un endroit où les choses viennent pourrir. Les bateaux n'y accostent plus que la nuit, et les rues sentent le poisson mort et le tord-boyaux. Les hommes de loi y passent rarement, et jamais longtemps. C'est là, au bout de la baie, que les Freux ont fait leur nid.</p>
+        <article class="recit">
+          <p>On raconte que Van Horn n'a jamais été une ville, seulement un endroit où les choses viennent pourrir. Les bateaux n'y accostent plus que la nuit, et les rues sentent le poisson mort et le tord-boyaux. Les hommes de loi y passent rarement, et jamais longtemps. C'est là, au bout de la baie, que les Freux ont fait leur nid.</p>
 
-      <p>Ils ne sont pas arrivés en conquérants, avec des drapeaux et un chef à leur tête. Ils sont venus un par un, comme les corbeaux qui s'abattent sur un champ après la moisson. Il y a d'abord eu les mineurs chassés d'Annesburg après avoir réclamé un salaire décent, puis les dockers de Saint Denis remplacés par des bras moins chers. Sont venus aussi les fermiers dont la terre a été saisie par la banque, les déserteurs qui refusaient de mourir pour un pays qui ne les nourrissait pas, et quelques voleurs de bas étage que les grandes villes avaient recrachés. Tous avaient été mâchés et jetés par la même machine, celle des compagnies, des banquiers, des politiciens en haut-de-forme et des hommes de loi qui les servent. À Van Horn, ils ont découvert qu'ils n'étaient plus seuls. Ils ont surtout découvert qu'à plusieurs, ils n'avaient plus peur.</p>
+                <p>Ils ne sont pas arrivés en conquérants, avec des drapeaux et un chef à leur tête. Ils sont venus un par un, comme les corbeaux qui s'abattent sur un champ après la moisson. Il y a d'abord eu les mineurs chassés d'Annesburg après avoir réclamé un salaire décent, puis les dockers de Saint Denis remplacés par des bras moins chers. Sont venus aussi les fermiers dont la terre a été saisie par la banque, les déserteurs qui refusaient de mourir pour un pays qui ne les nourrissait pas, et quelques voleurs de bas étage que les grandes villes avaient recrachés. Tous avaient été mâchés et jetés par la même machine, celle des compagnies, des banquiers, des politiciens en haut-de-forme et des hommes de loi qui les servent. À Van Horn, ils ont découvert qu'ils n'étaient plus seuls. Ils ont surtout découvert qu'à plusieurs, ils n'avaient plus peur.</p>
 
-      <p>Les Freux ne vouent pas tous une haine au gouvernement. Beaucoup n'en ont jamais croisé que les représentants, et ne sauraient pas dire qui siège à Saint Denis. Ce qu'ils rejettent, c'est ce qu'il représente : les clôtures qui coupent les terres, les impôts, les registres, les lois écrites par des hommes qui n'ont jamais tenu une pioche, et les compagnies qui achètent les juges. Ils se souviennent, ou croient se souvenir, d'un temps où un homme pouvait s'installer où il voulait, chasser, commercer et vivre sans rendre de comptes à personne. C'est ce temps-là qu'ils veulent retrouver : un pays où chacun serait libre. Ils en parlent le soir au saloon, entre deux verres. Ils rêvent de voir les foules se lever, les mineurs jeter leurs pioches et les fermiers marcher sur les villes, jusqu'à ce que les gens de Saint Denis tremblent derrière leurs volets. Ils ne veulent pas se contenter de voler, ils veulent faire bouger les choses et que le pays entier entende leur colère. Alors ils répandent des rumeurs, collent des tracts sur les murs d'Annesburg et de Valentine, et montent les ouvriers contre leurs patrons. Ils rassemblent la colère des petites gens jusqu'à ce qu'elle déborde dans la rue. Quand la foule hurle devant la mairie, il y a toujours quelques Freux pour vider pendant ce temps le magasin d'à côté.</p>
+                <p>Les Freux ne vouent pas tous une haine au gouvernement. Beaucoup n'en ont jamais croisé que les représentants, et ne sauraient pas dire qui siège à Saint Denis. Ce qu'ils rejettent, c'est ce qu'il représente : les clôtures qui coupent les terres, les impôts, les registres, les lois écrites par des hommes qui n'ont jamais tenu une pioche, et les compagnies qui achètent les juges. Ils se souviennent, ou croient se souvenir, d'un temps où un homme pouvait s'installer où il voulait, chasser, commercer et vivre sans rendre de comptes à personne. C'est ce temps-là qu'ils veulent retrouver : un pays où chacun serait libre. Ils en parlent le soir au saloon, entre deux verres. Ils rêvent de voir les foules se lever, les mineurs jeter leurs pioches et les fermiers marcher sur les villes, jusqu'à ce que les gens de Saint Denis tremblent derrière leurs volets. Ils ne veulent pas se contenter de voler, ils veulent faire bouger les choses et que le pays entier entende leur colère. Alors ils répandent des rumeurs, collent des tracts sur les murs d'Annesburg et de Valentine, et montent les ouvriers contre leurs patrons. Ils rassemblent la colère des petites gens jusqu'à ce qu'elle déborde dans la rue. Quand la foule hurle devant la mairie, il y a toujours quelques Freux pour vider pendant ce temps le magasin d'à côté.</p>
 
-      <p>Car il ne faut pas s'y tromper : la cause ne les rend pas nobles. Certains y croient sincèrement, d'autres ne s'en servent que pour justifier leurs vols, et la plupart ne savent plus très bien où s'arrête l'un et où commence l'autre. Les Freux n'ont ni code, ni honneur, ni parole qui tienne. Ils respectent la force et rien d'autre. Un serment ne vaut que tant qu'il rapporte, et une amitié ne dure que tant qu'elle protège.</p>
+                <p>Car il ne faut pas s'y tromper : la cause ne les rend pas nobles. Certains y croient sincèrement, d'autres ne s'en servent que pour justifier leurs vols, et la plupart ne savent plus très bien où s'arrête l'un et où commence l'autre. Les Freux n'ont ni code, ni honneur, ni parole qui tienne. Ils respectent la force et rien d'autre. Un serment ne vaut que tant qu'il rapporte, et une amitié ne dure que tant qu'elle protège.</p>
 
-      <p>Seul, un Freux ne vaut pas grand-chose, et il le sait. Face à un homme aussi bien armé que lui, il ne cherche pas la gloire. Il sourit, négocie, promet, ment. Il propose un marché, invente une dette ou un ami influent. Si les mots ne suffisent pas, il tourne bride et s'enfuit sans la moindre honte, car pour lui, un mort n'a jamais eu raison de rester. Mais lorsqu'ils sont nombreux, tout change. Comme la colonie de corbeaux qui se met à croasser dès qu'elle se sait en nombre, la peur disparaît et laisse place à une arrogance cruelle. Ils encerclent leur proie, ricanent, la poussent, lui arrachent sa montre et ses bottes, et prennent un plaisir mauvais à humilier ceux qui, ailleurs, les auraient regardés de haut. Ils ont le courage de la nuée, jamais celui de l'homme seul.</p>
+                <p>Seul, un Freux ne vaut pas grand-chose, et il le sait. Face à un homme aussi bien armé que lui, il ne cherche pas la gloire. Il sourit, négocie, promet, ment. Il propose un marché, invente une dette ou un ami influent. Si les mots ne suffisent pas, il tourne bride et s'enfuit sans la moindre honte, car pour lui, un mort n'a jamais eu raison de rester. Mais lorsqu'ils sont nombreux, tout change. Comme la colonie de corbeaux qui se met à croasser dès qu'elle se sait en nombre, la peur disparaît et laisse place à une arrogance cruelle. Ils encerclent leur proie, ricanent, la poussent, lui arrachent sa montre et ses bottes, et prennent un plaisir mauvais à humilier ceux qui, ailleurs, les auraient regardés de haut. Ils ont le courage de la nuée, jamais celui de l'homme seul.</p>
 
-      <p>Mais rien ne terrifie un Freux autant qu'une étoile de shérif. Il suffit qu'un homme de loi apparaisse au bout de la rue pour que la meute la plus arrogante se disperse, comme une nuée de corbeaux au premier coup de fusil. Peu importe qu'ils soient dix contre un : la corde, la prison et les avis de recherche pèsent plus lourd que tout le courage du monde. Les Freux ne tiennent jamais tête à la loi. Ils abandonnent leur proie, sautent en selle et filent se cacher dans les collines, les caves ou les marais, et ne reviennent qu'une fois le shérif reparti.</p>
+                <p>Mais rien ne terrifie un Freux autant qu'une étoile de shérif. Il suffit qu'un homme de loi apparaisse au bout de la rue pour que la meute la plus arrogante se disperse, comme une nuée de corbeaux au premier coup de fusil. Peu importe qu'ils soient dix contre un : la corde, la prison et les avis de recherche pèsent plus lourd que tout le courage du monde. Les Freux ne tiennent jamais tête à la loi. Ils abandonnent leur proie, sautent en selle et filent se cacher dans les collines, les caves ou les marais, et ne reviennent qu'une fois le shérif reparti.</p>
 
-      <p>Ce sont de vrais rapaces, et comme tous les charognards, ils préfèrent frapper ce qui ne peut pas se défendre. Ils ne cherchent pas le combat loyal, ils le fuient. Ils guettent, ils attendent, ils tendent des pièges. Un homme qui saigne au bord de la route peut n'être qu'un appât, et un guide trop aimable peut mener un voyageur droit dans un ravin où dix fusils l'attendent. Une rumeur lancée au bon moment peut suffire à envoyer les hommes de loi à l'autre bout du comté. Les Freux comptent sur la ruse avant la poudre, car la ruse ne coûte rien et ne tue personne de leur côté.</p>
+                <p>Ce sont de vrais rapaces, et comme tous les charognards, ils préfèrent frapper ce qui ne peut pas se défendre. Ils ne cherchent pas le combat loyal, ils le fuient. Ils guettent, ils attendent, ils tendent des pièges. Un homme qui saigne au bord de la route peut n'être qu'un appât, et un guide trop aimable peut mener un voyageur droit dans un ravin où dix fusils l'attendent. Une rumeur lancée au bon moment peut suffire à envoyer les hommes de loi à l'autre bout du comté. Les Freux comptent sur la ruse avant la poudre, car la ruse ne coûte rien et ne tue personne de leur côté.</p>
 
-      <p>Van Horn est devenu leur royaume. Les habitants qui baissent les yeux et tiennent leur langue y survivent, et servent parfois de guetteurs ou de receleurs. En revanche, l'étranger qui descend de cheval en veste neuve, bottes cirées et montre en or au gilet, a commis sa première erreur en franchissant le pont. Il paiera d'une façon ou d'une autre, avec son argent, ses vêtements ou son orgueil. Les hors-la-loi recherchés, eux, y trouvent refuge, car Van Horn accueille tous ceux que la loi pourchasse. Encore faut-il qu'ils paient, et que leur tête ne prenne pas trop de valeur. Chez les Freux, l'hospitalité a toujours un prix, et une prime assez élevée peut faire oublier bien des promesses.</p>
+                <p>Van Horn est devenu leur royaume. Les habitants qui baissent les yeux et tiennent leur langue y survivent, et servent parfois de guetteurs ou de receleurs. En revanche, l'étranger qui descend de cheval en veste neuve, bottes cirées et montre en or au gilet, a commis sa première erreur en franchissant le pont. Il paiera d'une façon ou d'une autre, avec son argent, ses vêtements ou son orgueil. Les hors-la-loi recherchés, eux, y trouvent refuge, car Van Horn accueille tous ceux que la loi pourchasse. Encore faut-il qu'ils paient, et que leur tête ne prenne pas trop de valeur. Chez les Freux, l'hospitalité a toujours un prix, et une prime assez élevée peut faire oublier bien des promesses.</p>
 
-      <p>Car c'est la dernière vérité des Freux, celle qu'aucun d'eux n'avoue mais que tous connaissent : quand tout s'effondre, chacun sauve sa peau. Un Freux pris par la loi n'hésitera pas longtemps à donner un nom pour échapper à la corde. Celui qui revient seul d'un coup raté devra toujours expliquer pourquoi les autres, eux, ne sont pas revenus. On ne fait confiance à personne à Van Horn, pas même à ceux avec qui l'on partage le feu et la bouteille. C'est peut-être cette méfiance qui les garde en vie.</p>
+                <p>Car c'est la dernière vérité des Freux, celle qu'aucun d'eux n'avoue mais que tous connaissent : quand tout s'effondre, chacun sauve sa peau. Un Freux pris par la loi n'hésitera pas longtemps à donner un nom pour échapper à la corde. Celui qui revient seul d'un coup raté devra toujours expliquer pourquoi les autres, eux, ne sont pas revenus. On ne fait confiance à personne à Van Horn, pas même à ceux avec qui l'on partage le feu et la bouteille. C'est peut-être cette méfiance qui les garde en vie.</p>
 
-      <p>C'est peut-être là tout le secret de Van Horn. Les shérifs qui s'y rendent n'y trouvent jamais personne à arrêter : des rues silencieuses, des volets fermés, et des habitants qui n'ont rien vu. Les Freux s'envolent dès qu'une étoile brille au bout du pont, et reviennent se poser dès que les chevaux sont repartis. Alors la loi finit par se lasser et par laisser la ville à son sort. Van Horn n'appartient plus vraiment au comté ni à l'État. Elle appartient aux oiseaux noirs perchés sur ses toits, qui attendent le jour où plus personne ne portera d'étoile.</p>
-
-      <div class="fin">✦ ✦ ✦</div>
+                <p>C'est peut-être là tout le secret de Van Horn. Les shérifs qui s'y rendent n'y trouvent jamais personne à arrêter : des rues silencieuses, des volets fermés, et des habitants qui n'ont rien vu. Les Freux s'envolent dès qu'une étoile brille au bout du pont, et reviennent se poser dès que les chevaux sont repartis. Alors la loi finit par se lasser et par laisser la ville à son sort. Van Horn n'appartient plus vraiment au comté ni à l'État. Elle appartient aux oiseaux noirs perchés sur ses toits, qui attendent le jour où plus personne ne portera d'étoile.</p>
+          <div class="fin">✦</div>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="section" id="personnages">
-    <div class="largeur">
-      <header class="entete">
-        <p class="entete__numero">III · Personnages</p>
+    <div class="conteneur">
+      <header class="titre-section" data-reveal>
+        <p class="surligne">Personnages</p>
         <h2>Les principaux personnages</h2>
-        <p class="entete__intro">Le groupe compte cinq membres. Voici ceux dont la fiche est déjà écrite.</p>
+        <p>Le groupe compte cinq membres. Voici ceux dont la fiche est déjà écrite.</p>
       </header>
 
       <div class="membres">
-        <a class="membre" href="kaid-marlow.html">
-          <div class="membre__visuel"><span class="membre__monogramme">KM</span></div>
+        <a class="membre" href="kaid-marlow.html" data-reveal>
+          <div class="membre__visuel"><span class="membre__monogramme">KM</span><span class="puce">« Scar »</span></div>
           <div class="membre__corps">
-            <div class="membre__surnom">« Scar »</div>
             <h3>Kaid Marlow</h3>
             <p>Vingt ans, fils d'un chimiste ruiné, élevé dans les rues de Saint Denis. Le médecin de fortune de la bande, rusé, sans scrupules et fasciné par une science qui ne s'embarrasse d'aucune règle.</p>
-            <span class="membre__lien">Lire son histoire →</span>
+            <span class="membre__lien">Lire son histoire <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </div>
         </a>
-        <a class="membre" href="mabel-crowley.html">
-          <div class="membre__visuel"><img src="mabel-crowley.jpg" alt="Portrait de Mabel Crowley" loading="lazy"></div>
+        <a class="membre" href="mabel-crowley.html" data-reveal>
+          <div class="membre__visuel"><img src="mabel-crowley.jpg" alt="Portrait de Mabel Crowley" loading="lazy"><span class="puce">« La Ratoune »</span></div>
           <div class="membre__corps">
-            <div class="membre__surnom">« La Ratoune »</div>
             <h3>Mabel Crowley</h3>
             <p>Vingt ans, fille des quais de New Hanover. Fouineuse, bavarde et reine des combines, elle tombe parfois dans ses propres pièges et en rit la première.</p>
-            <span class="membre__lien">Lire son histoire →</span>
+            <span class="membre__lien">Lire son histoire <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </div>
         </a>
-        <div class="membre membre--vide">Les fiches des trois autres membres viendront se poser ici.</div>
+        <div class="membre membre--vide" data-reveal>
+          <span class="icone-boite"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          Les fiches des trois autres membres arrivent bientôt.
+        </div>
       </div>
     </div>
   </section>
@@ -194,15 +215,35 @@
 </main>
 
 <footer class="pied">
-  <div class="pied__marque">Les Freux de Van Horn</div>
-  <nav class="pied__liens" aria-label="Pages du site">
-    <a href="index.html">Accueil</a>
-    <a href="dossier-groupe.html">Dossier de groupe</a>
-    <a href="kaid-marlow.html">Kaid Marlow</a>
-    <a href="mabel-crowley.html">Mabel Crowley</a>
-  </nav>
-  <p>Groupe de pillards · Red Dead RP · New Hanover, années 1890</p>
+  <div class="pied__grille">
+    <div>
+      <a class="marque" href="index.html"><span class="marque__logo"><svg viewBox="-24 -12 48 24" aria-hidden="true"><path fill="currentColor" d="M-20 2 C-14 -6 -7 -7 -1 1 L0 3 L1 1 C7 -7 14 -6 20 2 C13 -2 6 -1 1 5 L0 7 L-1 5 C-6 -1 -13 -2 -20 2Z"/></svg></span>Les Freux de Van Horn</a>
+      <p class="pied__texte">Groupe de pillards territorial implanté à Van Horn. Red Dead RP, New Hanover, années 1890.</p>
+    </div>
+    <div class="pied__colonnes">
+      <div class="pied__colonne">
+        <p>Le groupe</p>
+        <ul>
+          <li><a href="index.html#objectifs">Objectifs</a></li>
+          <li><a href="index.html#background">Background</a></li>
+          <li><a href="dossier-groupe.html">Dossier de groupe</a></li>
+        </ul>
+      </div>
+      <div class="pied__colonne">
+        <p>Personnages</p>
+        <ul>
+          <li><a href="kaid-marlow.html">Kaid Marlow</a></li>
+          <li><a href="mabel-crowley.html">Mabel Crowley</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pied__bas">
+    <span>« Un Freux seul, c'est un rat. Dix Freux, c'est la peste. »</span>
+    <a href="#haut">Haut de page <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
+  </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>
