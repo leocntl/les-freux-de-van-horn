@@ -960,6 +960,14 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
 .dossier__grille { display: grid; grid-template-columns: minmax(0, 15rem) 1fr; gap: clamp(1.2rem, 4vw, 2.2rem); align-items: start; }
 .photo { margin: 0; background: #f5ecd9; padding: .55rem .55rem 2rem; box-shadow: 0 6px 18px rgba(40, 25, 10, .3); transform: rotate(1.5deg); }
 .photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; filter: sepia(.22) contrast(1.05); }
+.photo__vide {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  background: radial-gradient(circle at 50% 40%, #4a3322, #1c140e);
+  filter: sepia(.2);
+}
+.photo__vide span { font-family: var(--marque); font-size: 3.4rem; color: #d9b67f; }
 .photo figcaption { font-family: var(--machine); font-size: .76rem; text-align: center; margin-top: .55rem; color: #4a3b2a; }
 .dossier__devise { margin: 1.4rem 0 0; font-family: var(--lecture); font-style: italic; font-size: 1.12rem; border-left: 3px solid #9c3524; padding-left: .9rem; color: #3b2d1f; }
 .tampon {
