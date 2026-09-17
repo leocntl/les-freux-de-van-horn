@@ -1020,6 +1020,7 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
 }
 .pied__bas a { color: var(--doux); text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; }
 .pied__bas a:hover { color: var(--texte); }
+.signature { max-width: var(--large); margin: 1.2rem auto 0; text-align: center; font-family: var(--ui); font-size: .72rem; letter-spacing: .06em; color: var(--pale); opacity: .8; }
 
 /* ---------- Apparition au défilement ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
