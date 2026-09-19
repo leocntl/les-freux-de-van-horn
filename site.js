@@ -92,7 +92,6 @@
     });
   }
 
-  document.querySelectorAll('[data-imprimer]').forEach((b) => b.addEventListener('click', () => window.print()));
 
   const photos = document.querySelectorAll('[data-zoom]');
   if (photos.length && typeof HTMLDialogElement === 'function') {
