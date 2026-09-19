@@ -1063,6 +1063,31 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
   .liens__visuel { position: static; }
 }
 
+/* ---------- Frise de la bande ---------- */
+.frise { list-style: none; margin: 0 auto; padding: 0; position: relative; max-width: 62rem; }
+.frise::before { content: ""; position: absolute; top: .5rem; bottom: .5rem; left: 50%; width: 2px; transform: translateX(-50%); background: linear-gradient(180deg, transparent, var(--braise-fonce) 6%, var(--braise-fonce) 88%, transparent); opacity: .55; }
+.frise__etape { position: relative; width: 50%; padding: 0 2.6rem 2rem 0; }
+.frise__etape:nth-child(even) { margin-left: 50%; padding: 0 0 2rem 2.6rem; }
+.frise__point { position: absolute; top: 1.35rem; right: -8px; width: 16px; height: 16px; border-radius: 50%; background: var(--fond); border: 3px solid var(--braise-fonce); z-index: 1; }
+.frise__etape:nth-child(even) .frise__point { right: auto; left: -8px; }
+.frise__etape--cle .frise__point { background: var(--braise); border-color: var(--braise-vive); box-shadow: 0 0 14px rgba(155, 226, 45, .6); }
+.frise__carte { background: var(--surface); border: 1px solid var(--bord); border-radius: 16px; padding: 1.2rem 1.3rem 1.3rem; transition: border-color .4s; }
+.frise__carte:hover { border-color: rgba(140, 225, 40, .22); }
+.frise__etape--cle .frise__carte { border-color: rgba(155, 226, 45, .22); background: linear-gradient(160deg, rgba(155, 226, 45, .07), var(--surface) 55%); }
+.frise__etape--avenir .frise__carte { background: transparent; border-style: dashed; border-color: var(--bord-fort); }
+.frise__etape--avenir .frise__point { border-style: dashed; }
+.frise__date { margin: 0 0 .5rem; font-family: var(--machine); font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--laiton); }
+.frise__tete { display: flex; align-items: center; gap: .8rem; margin-bottom: .55rem; }
+.frise__tete h3 { margin: 0; font-family: var(--titre); font-weight: 600; font-size: 1.35rem; line-height: 1.2; }
+.frise__portrait { flex: none; width: 2.8rem; height: 2.8rem; border-radius: 50%; overflow: hidden; border: 2px solid var(--braise-fonce); }
+.frise__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.frise__carte > p:last-child { margin: 0; color: var(--doux); line-height: 1.68; font-size: .96rem; }
+@media (max-width: 760px) {
+  .frise::before { left: 7px; transform: none; }
+  .frise__etape, .frise__etape:nth-child(even) { width: auto; margin-left: 0; padding: 0 0 1.4rem 2rem; }
+  .frise__point, .frise__etape:nth-child(even) .frise__point { left: 0; right: auto; }
+}
+
 /* ---------- Apparition au défilement ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
 .js [data-reveal].est-visible { opacity: 1; transform: none; }
