@@ -1123,6 +1123,39 @@ a.membre:hover .membre__visuel img { transform: scale(1.04); }
   .barre__liens .barre__sous a { font-size: .92rem; padding: .6rem 1rem; color: var(--doux); }
 }
 
+/* ---------- La roue des Freux ---------- */
+.roue-bloc { display: grid; grid-template-columns: minmax(0, 22rem) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; max-width: 56rem; margin: 0 auto 2.5rem; }
+.roue-zone { position: relative; }
+.roue { display: block; width: 100%; height: auto; transition: transform 5s cubic-bezier(.17, .67, .12, .99); filter: drop-shadow(0 12px 30px rgba(0, 0, 0, .55)); }
+.roue__part--0 { fill: var(--braise-fonce); }
+.roue__part--1 { fill: #16210f; }
+.roue__part { stroke: #071004; stroke-width: 1.5; }
+.roue__texte { font-family: var(--ui); font-size: 11.5px; font-weight: 700; text-anchor: middle; fill: #071004; letter-spacing: .02em; }
+.roue__part--1 + .roue__part { fill: #16210f; }
+.roue g:nth-of-type(even) .roue__texte { fill: var(--braise); }
+.roue__moyeu { fill: var(--fond); stroke: var(--braise); stroke-width: 3; }
+.roue__marque { font-family: var(--marque); font-size: 17px; text-anchor: middle; fill: var(--braise); }
+.roue__fleche { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 13px solid transparent; border-right: 13px solid transparent; border-top: 24px solid var(--braise-vive); z-index: 2; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .6)); }
+.roue-cote { display: grid; gap: 1rem; }
+.roue__bouton { justify-self: start; }
+.roue__resultat { background: var(--surface); border: 1px solid var(--bord-fort); border-radius: 16px; padding: 1.2rem 1.3rem; min-height: 7.5rem; display: grid; align-content: center; }
+.roue__resultat p { margin: 0; color: var(--doux); line-height: 1.6; }
+.roue__attente { font-family: var(--lecture); font-style: italic; }
+.roue__verdict { font-family: var(--titre); font-weight: 600; font-size: 1.5rem; color: var(--braise); margin-bottom: .4rem !important; }
+.roue__note { margin: 0; color: var(--pale); font-size: .9rem; line-height: 1.6; }
+.roue-legende { max-width: 56rem; margin: 0 auto 2rem; }
+.roue-legende h2 { font-family: var(--titre); font-size: 1.5rem; margin: 0 0 1rem; }
+.roue-legende ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .7rem; }
+.roue-legende li { background: var(--surface); border: 1px solid var(--bord); border-radius: 14px; padding: .9rem 1rem; display: grid; gap: .25rem; }
+.roue-legende strong { font-family: var(--ui); color: var(--texte); }
+.roue-legende span { color: var(--doux); font-size: .92rem; line-height: 1.55; }
+@media (max-width: 760px) {
+  .roue-bloc { grid-template-columns: 1fr; }
+  .roue-zone { max-width: 20rem; margin: 0 auto; }
+  .roue__bouton { justify-self: stretch; text-align: center; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .roue { transition-duration: .8s; } }
+
 /* ---------- Apparition au défilement ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
 .js [data-reveal].est-visible { opacity: 1; transform: none; }
